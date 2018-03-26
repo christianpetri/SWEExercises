@@ -16,11 +16,11 @@ public class MathUtils {
      * @return sum
      */
     public double addition(List<Double> numbers){
-        double result = 0;
+        double sum = 0;
         for ( double number : numbers ) {
-            result +=number;
+            sum +=number;
         }
-        return  result;
+        return  sum;
     }
 
     /**
@@ -52,4 +52,6 @@ public class MathUtils {
     public double multiplication(double a, double b){
         return a*b;
     }
+
+
 }

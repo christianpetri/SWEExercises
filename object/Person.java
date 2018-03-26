@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * @author : ${user}
  * @since: ${date}
- * 
+ *
  */
 public class Person {
 
