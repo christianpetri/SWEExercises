@@ -1,5 +1,7 @@
 import ch.juventus.java.javadoc.MathUtils;
 import object.Person;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,8 +10,10 @@ import java.util.List;
 
 
 public class Main {
+    final static Logger logger = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
+        logger.warn("Hello World");
         MathUtils calc = new MathUtils();
         double result = calc.subtraction(1,15);
         System.out.println( "calc.subtraction(1,15) --> " + result );
@@ -28,5 +32,6 @@ public class Main {
         System.out.print("Compare Objects: is andi == peter : ");
         System.out.println(andi == peter);
         System.out.println(andi.toString());
+
     }
 }
