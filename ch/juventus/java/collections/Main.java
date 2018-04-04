@@ -6,8 +6,8 @@ import java.util.*;
  * @author : ${user}
  * @since: ${date}
  */
-public class Main {
 
+public class Main {
 
     public static void main(String[] args) {
 
@@ -24,14 +24,15 @@ public class Main {
         tiere.add("Pudel");
         tiere.add("Gorilla");
 
-
         System.out.println(tiere.size());
-        System.out.println(tiere.contains("Hund"));
+        System.out.println("tiere.contains(\"Hund\"): "+tiere.contains("Hund"));
         //tiere.remove(11);
-        tiere.remove("Affe ");
+        System.out.println("tiere.remove(\"Gorilla\"): "+tiere.remove("Gorilla"));
         //tiere.clear();
         System.out.println(tiere.size());
 
+
+        System.out.println();
         System.out.println("Linked List");
         /*
         * Die Länge der Liste ausgeben
@@ -53,9 +54,8 @@ public class Main {
         tiereLiked.add("Pudel");
         tiereLiked.add("Gorilla");
 
-        System.out.println( tiereLiked.size());
-        System.out.println(tiereLiked.get(2));
-        System.out.println(tiereLiked.indexOf("Foo"));
+        System.out.println("tiereLiked.size()" + tiereLiked.size());
+        System.out.println("tiereLiked.indexOf(\"Foo\") " + tiereLiked.indexOf("Foo"));
         System.out.println(tiereLiked.get(2));
         System.out.println(tiereLiked.getFirst());
         System.out.println(tiereLiked.getLast());
@@ -63,6 +63,8 @@ public class Main {
         System.out.println(tiereLiked.removeLast());
 
 
+        System.out.println();
+        System.out.println("HashSet");
         /*
          Prüft ob das Set nicht leer ist
          Gebt die Länge des Sets aus. Existieren die Personen mit den gleichen Vor- und Nachnamen nur 1 mal?
@@ -79,17 +81,15 @@ public class Main {
 
         System.out.println(hashSet);
 
-        System.out.println("is emtpy? "+hashSet.isEmpty());
-        System.out.println(hashSet.size());
-        System.out.println(hashSet.contains("Christian Petri"));
-        System.out.println(hashSet.remove("Foo Foo"));
+        System.out.println("is emtpy? " + hashSet.isEmpty());
+        System.out.println("hashSet.size() " + hashSet.size());
+        System.out.println("hashSet.contains(\"Christian Petri\") " + hashSet.contains("Christian Petri"));
+        System.out.println("hashSet.remove(\"Foo Foo\") " + hashSet.remove("Foo Foo"));
         System.out.println(hashSet);
 
-
+        System.out.println();
         System.out.println("Treeset");
-
         Set ts = new TreeSet();
-        // Add elements to the tree set
 
         ts.add("Hund");
         ts.add("Katze");
@@ -107,14 +107,17 @@ public class Main {
 
         System.out.println(ts);
 
+
+        System.out.println();
+        System.out.println("Map<String , List<Person>> hashMap");
         Map<String , List<Person>> hashMap = new HashMap<>();
+
         List<Person>  family = new ArrayList<>();
         family.add(new Person("Christan", "Petri"));
-        family.add(new Person("Christan", "Petri"));
-        family.add(new Person("Christan", "Petri"));
+        family.add(new Person("Walter", "Smith"));
+        family.add(new Person("John", "Meier"));
 
         List<Person>  office = new ArrayList<>();
-
 
         List<Person>  friends = new ArrayList<>();
         friends.add(  new Person("Walter" , "Jung"));
@@ -129,12 +132,12 @@ public class Main {
         System.out.println(hashMap.values());
         System.out.println(hashMap.containsKey("family"));
         System.out.println(hashMap.entrySet());
-
         hashMap.put("office", office);
+        System.out.println(hashMap.values());
 
+
+        System.out.println();
         System.out.println("List Iterator");
-
-
         ListIterator<String> lItr = tiere.listIterator();
         // System.out.println(tiere);
         while (lItr.hasNext()){
@@ -145,8 +148,6 @@ public class Main {
         while (mapIterator.hasNext()){
             System.out.println(mapIterator.next());
         }
-
-
     }
 
 }

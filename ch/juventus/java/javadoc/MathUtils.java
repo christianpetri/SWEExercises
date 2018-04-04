@@ -2,11 +2,10 @@ package ch.juventus.java.javadoc;
 import java.util.List;
 
 /**
- *  MathUtil enables you to do addition, subtraction, division and multiplication
+ *  MathUtil enables you to do addition, subtraction, multiplication and division with numbers of the type  double
  *    @author : ${user}
  *    @since : ${date}
  */
-
 
 public class MathUtils {
 
@@ -34,17 +33,7 @@ public class MathUtils {
     }
 
     /**
-     *  divides a with b
-     * @param a divided
-     * @param b divisor
-     * @return quotient
-     */
-    public double division(double a, double b){
-        return a / b;
-    }
-
-    /**
-     * mutltiplies a with b
+     * multiplies a with b
      * @param a multiplier
      * @param b multiplicand
      * @return product
@@ -53,5 +42,13 @@ public class MathUtils {
         return a*b;
     }
 
-
+    /**
+     *  divides a with b
+     * @param a divided
+     * @param b divisor
+     * @return quotient
+     */
+    public double division(double a, double b){
+        return a / b;
+    }
 }
