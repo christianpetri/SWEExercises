@@ -10,7 +10,7 @@ public class Main {
     final static Logger logger = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
-        logger.warn("Hello World");
+        logger.warn("Hello World!");
         MathUtils calc = new MathUtils();
         double result = calc.subtraction(1,15);
         System.out.println( "calc.subtraction(1,15) --> " + result );
