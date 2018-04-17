@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?language JavaScript?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<?import javafx.scene.text.Text?>
+<VBox fx:id="vbox" layoutX="10.0" layoutY="10.0" prefHeight="300.0" prefWidth="300.0" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+    <style>
+        -fx-padding: 10;
+        -fx-border-style: solid inside;
+        -fx-border-width: 2;
+        -fx-border-insets: 5;
+        -fx-border-radius: 5;
+        -fx-border-color: blue;
+    </style>
+    <children>
+        <!--      Text text = new Text();
+        text.setFont(new Font(45));
+        text.setX(50);
+        text.setY(150);
+        text.setText("Hello World");
+
+
+        Button button = new Button();
+        button.setStyle("-fx-background-color: red; -fx-text-fill: white");
+        button.setText("Change color");
+        button.setTranslateX(50);
+        button.setTranslateY(50);
+         Scene scene = new Scene(root, 600, 300, Color.GREEN); //, Color.green
+        EventHandler<MouseEvent> eventHandler = new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                //Node node = e.getTarget();
+                if(scene.getFill() == Color.GREEN) {
+                    scene.setFill(Color.RED);
+
+                }  else if (scene.getFill() == Color.RED)
+                    scene.setFill(Color.GREEN);
+            }
+        };
+
+        button.addEventHandler( MouseEvent.MOUSE_CLICKED, eventHandler );
+        -->
+        <Text text="Hello World"   translateX="15"/>
+        <Button text="Change Color" style="-fx-background-color: red; -fx-text-fill: white" onMouseClicked="changeBackgroundColor()"/>
+        <fx:script>
+            var x = 0;
+            function changeBackgroundColor(){
+                x++;
+                if(x == 1)
+                vbox.setStyle("-fx-background-color:red")
+
+                if(x == 2)
+                    vbox.setStyle("-fx-background-color:green")
+
+                if(x >= 2)
+                    x=0;
+            }
+        </fx:script>
+        <!--
+        <Label fx:id="inputLbl" alignment="CENTER_LEFT" cache="true" cacheHint="SCALE" prefHeight="30.0" prefWidth="200.0" text="Please insert Your Input here:" textAlignment="LEFT" />
+        <TextField fx:id="inputText" prefWidth="100.0" />
+        <Button fx:id="okBtn" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" text="OK" textAlignment="CENTER" />
+        <Label fx:id="outputLbl" alignment="CENTER_LEFT" cache="true" cacheHint="SCALE" prefHeight="30.0" prefWidth="200.0" text="Your Input:" textAlignment="LEFT" />
+        <TextArea fx:id="outputText" prefHeight="100.0" prefWidth="200.0" wrapText="true" />
+        -->
+    </children>
+</VBox>
